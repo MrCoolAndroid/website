@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higiene Universitaria | Proyecto Taller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        :root { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; }
+
+        .navbar { 
+            transition: all 0.4s; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-section { 
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+                        url('imagenes/hero.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .img-box {
+            width: 100%;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            background: #ddd;
+        }
+        .img-box img { width: 100%; height: auto; display: block; transition: 0.5s; }
+        .img-box:hover img { scale: 1.05; }
+
+        .section-padding { padding: 100px 0; }
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            height: 100%;
+            transition: 0.3s;
+        }
+        .card-custom:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(13, 110, 253, 0.15); }
+        
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: #e7f0ff;
+            color: #0d6efd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-offset="100">
+
+    <nav id="navbarMain" class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#inicio">
+                <i class="bi bi-shield-check me-2"></i>HIGIENE UNI
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problematica">Problemática</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solucion">Solución</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#implementacion">Plan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <span class="badge bg-primary px-3 py-2 mb-3 rounded-pill">Taller de Creación e Innovación</span>
+                    <h1 class="display-1 fw-bold mb-4">Campaña de Higiene en el Campus</h1>
+                    <p class="lead fs-3 mb-5 opacity-90">Transformando nuestros espacios comunes a través de la conciencia colectiva.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#problematica" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">Explorar Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="problematica" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="display-4 fw-bold mb-4 text-dark">La Realidad Actual</h2>
+                    <p class="fs-5 text-muted mb-4">Detectamos que la falta de higiene no es solo un tema estético, sino un factor que afecta la salud y comodidad de toda la comunidad estudiantil.</p>
+                    
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-check2-circle text-primary fs-4 me-3"></i>
+                        <p class="mb-0"><strong>Insumos:</strong> Escasez recurrente de papel y jabón.</p>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <i class="bi bi-check2-circle text-primary fs-4 me-3"></i>
+                        <p class="mb-0"><strong>Mantenimiento:</strong> Necesidad de optimizar ciclos de limpieza.</p>
+                    </div>
+                    <div class="d-flex mb-4">
+                        <i class="bi bi-check2-circle text-primary fs-4 me-3"></i>
+                        <p class="mb-0"><strong>Ambiente:</strong> Presencia de malos olores y residuos acumulados.</p>
+                    </div>
+
+                    <div class="p-4 bg-light border-start border-primary border-4 rounded">
+                        <h5 class="mb-1">Población Afectada</h5>
+                        <p class="mb-0 text-muted">Estudiantes (usuarios principales), docentes y personal administrativo.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="img-box">
+                        <img src="imagenes/img1.jpg" alt="Imagen problemática">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucion" class="section-padding bg-light">
+        <div class="container text-center">
+            <h2 class="display-4 fw-bold mb-5">Propuesta Creativa</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="icon-circle mx-auto"><i class="bi bi-megaphone"></i></div>
+                        <h4>Campaña Visual</h4>
+                        <p class="text-muted">Folletos estratégicos con diseño moderno para captar la atención de los estudiantes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="icon-circle mx-auto"><i class="bi bi-brush"></i></div>
+                        <h4>Higiene Activa</h4>
+                        <p class="text-muted">Recordatorios claros sobre el lavado de manos y el desecho correcto de basura.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card-custom">
+                        <div class="icon-circle mx-auto"><i class="bi bi-chat-heart"></i></div>
+                        <h4>Conciencia Social</h4>
+                        <p class="text-muted">Fomentar el respeto por los espacios que compartimos todos los días.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="implementacion" class="section-padding">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="img-box mb-4">
+                        <img src="imagenes/img2.jpg" alt="Equipo trabajando">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="display-4 fw-bold mb-4">Hoja de Ruta</h2>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-start mb-5">
+                            <div class="step-number me-4">1</div>
+                            <div>
+                                <h4 class="fw-bold">Semana 1: Investigación</h4>
+                                <p class="text-muted">Análisis profundo de la problemática en sitio y diseño conceptual de la campaña.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start mb-5">
+                            <div class="step-number me-4">2</div>
+                            <div>
+                                <h4 class="fw-bold">Semana 2: Producción</h4>
+                                <p class="text-muted">Elaboración física del material visual y gestión de permisos con la universidad.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-start">
+                            <div class="step-number bg-success me-4">3</div>
+                            <div>
+                                <h4 class="fw-bold">Semana 3: Ejecución</h4>
+                                <p class="text-muted">Instalación en puntos estratégicos y evaluación del impacto en la comunidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="equipo" class="bg-dark text-white section-padding">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-5">Equipo del Proyecto</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-6 col-md-3">
+                    <h5 class="mb-1">Alan Elizondo</h5>
+                    <p class="text-secondary small">Matrícula 432446</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="mb-1">Carlos A. Gómez</h5>
+                    <p class="text-secondary small">Matrícula 430586</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="mb-1">Luis U. Morales</h5>
+                    <p class="text-secondary small">Matrícula 431649</p>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h5 class="mb-1">Benjamin Rocha</h5>
+                    <p class="text-secondary small">Matrícula 431108</p>
+                </div>
+            </div>
+            <div class="border-top border-secondary pt-4 mt-5">
+                <p class="text-secondary mb-0">Profesor: Javier Estrada Bazaldua</p>
+                <p class="text-secondary opacity-50 small">Ingeniero Mecánico Administrador | 5to Tetra</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
